@@ -1,9 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import Editor from './components/Editor';
+import Previewer from './components/Previewer';
 
 function App() {
+  /* what the user types into the editor */
+  const [markdown, setMarkdown] = React.useState("");
+  function updateMarkdown(event) {
+    setMarkdown(event.target.value);
+  }
   return (
-    <h1>Hello World</h1>
+    <div>
+      <Editor 
+      updateMarkdown = {updateMarkdown}
+      />
+      <Previewer />
+    </div>
   )
 }
 
