@@ -33,4 +33,4 @@ Here is a link to the [github repo](https://github.com/lucy-c1/markdown-previewe
 1. Use just 1s if you want!
 1. And here's an embedded image of a cute cat:
 
-![freeCodeCamp Logo](https://mystickermania.com/cdn/stickers/cute/mochi-peach-cat-bread-512x512.png)`
+![cute cat](https://mystickermania.com/cdn/stickers/cute/mochi-peach-cat-bread-512x512.png)`
