@@ -1,38 +1,27 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import ReactDOM from "react-dom/client";
 import Editor from './components/Editor';
 import Previewer from './components/Previewer';
 import { marked } from 'marked';
+import { defaultMarkdown } from './defaultMarkdown';
 import DOMPurify from 'dompurify';
 
 function App() {
   /* what the user types into the editor */
-  const [markdown, setMarkdown] = React.useState("");
-  /* markdown parsed by marked library, displays in previewer */
-  const [parsedMarkdown, setParsedMarkdown] = React.useState();
+  const [markdown, setMarkdown] = React.useState(defaultMarkdown);
 
   function updateMarkdown(event) {
     setMarkdown(event.target.value);
   }
 
-  React.useEffect(() => {
-    parseMarkdown();
-  }, [markdown]);
-
-  function parseMarkdown() {
-    const html = marked(markdown);
-    // make sure the html is safe using dompurify
-    const safeHtml = DOMPurify.sanitize(html);
-    console.log(safeHtml);
-    setParsedMarkdown(safeHtml);
-  }
   return (
     <div>
       <Editor 
       updateMarkdown = {updateMarkdown}
+      defaultMarkdown = {defaultMarkdown}
       />
       <Previewer 
-      parsedMarkdown = {parsedMarkdown}
+      parsedMarkdown = {DOMPurify.sanitize(marked(markdown, {breaks: true, gfm: true, }))}
       />
     </div>
   )
