@@ -1,23 +1,21 @@
 {
   "name": "Scrim-s00fsopfdn",
-  "description": "https://v2.scrimba.com/s00fsopfdn",
+  "homepage": "https://lucy-c1.github.io/markdown-previewer",
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
     "start": "vite",
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview"
   },
   "dependencies": {
-    "dompurify": "^3.1.6",
-    "marked": "^14.1.0",
-    "marked-react": "^2.0.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "Scrim-s00fsopfdn": "file:",
     "vite": "latest"
   },
   "devDependencies": {
-    "@vitejs/plugin-react": "*",
-    "gh-pages": "^6.1.1"
+    "@vitejs/plugin-react": "*"
   }
 }
