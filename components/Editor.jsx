@@ -10,7 +10,7 @@ save the markdown input and parse it to be html
 export default function Editor(props) {
     return (
         <div className = "editor-container">
-            <h1>Editor:</h1>
+            <div className = "sticky"><h1>Editor:</h1></div>
             <textarea id = "editor" onChange = {props.updateMarkdown} defaultValue={props.defaultMarkdown}></textarea>
         </div>
     )

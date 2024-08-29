@@ -3,26 +3,25 @@ import React from "react"
 export const defaultMarkdown = `
 # Welcome to my React Markdown Previewer!
 ## This is a sub-heading...
+### Here are some things you can do:
 
 Heres some code, \`<div></div>\`, between 2 backticks.
 
 \`\`\`
 // this is multi-line code:
 
-function anotherExample(firstLine, lastLine) {
-  if (firstLine == '\`\`\`' && lastLine == '\`\`\`') {
-    return multiLineCode;
-  }
+function sayHello() {
+    console.log("Hello world!")
 }
 \`\`\`
 
-You can also make text **bold**... whoa!
-Or _italic_.
-Or... wait for it... **_both!_**
-And feel free to go crazy ~~crossing stuff out~~.
+**Bold** text
+_Italic_ text.
+**_both!_**
+~~Cross struff~~.
 
-There's also [links](https://www.freecodecamp.org), and
-> Block Quotes!
+Here is a link to the [github repo](https://github.com/lucy-c1/markdown-previewer) for this project
+> Block Quotes
 
 - And of course there are lists.
   - Some are bulleted.
@@ -32,6 +31,6 @@ There's also [links](https://www.freecodecamp.org), and
 
 1. And there are numbered lists too.
 1. Use just 1s if you want!
-1. And last but not least, let's not forget embedded images:
+1. And here's an embedded image of a cute cat:
 
-![freeCodeCamp Logo](https://cdn.freecodecamp.org/testable-projects-fcc/images/fcc_secondary.svg)`
+![freeCodeCamp Logo](https://mystickermania.com/cdn/stickers/cute/mochi-peach-cat-bread-512x512.png)`

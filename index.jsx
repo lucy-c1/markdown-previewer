@@ -15,7 +15,7 @@ function App() {
   }
 
   return (
-    <div>
+    <div className = "app-container">
       <Editor 
       updateMarkdown = {updateMarkdown}
       defaultMarkdown = {defaultMarkdown}
